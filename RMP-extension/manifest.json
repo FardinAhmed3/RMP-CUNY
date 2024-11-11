@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Rate My Professor Finder",
+    "version": "1.0",
+    "description": "Quickly find professors' ratings on RateMyProfessors.",
+    "permissions": ["scripting", "activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  

@@ -1,0 +1,22 @@
+Brooklyn College School code = 223
+https://www.ratemyprofessors.com/search/professors/223?q=moshe&amp;did=10
+https://www.ratemyprofessors.com/professor/2538695
+
+
+
+
+application-type:json
+
+body:
+
+{
+  "query": "query NewSearchTeachersQuery($query: TeacherSearchQuery!, $count: Int, $includeCompareProfessors: Boolean!) { newSearch { teachers(query: $query, first: $count) { didFallback edges { cursor node { id legacyId firstName lastName department departmentId school { legacyId name id } ...CompareProfessorsColumn_teacher @include(if: $includeCompareProfessors) } } } } } fragment CompareProfessorsColumn_teacher on Teacher { id legacyId firstName lastName school { legacyId name id } department departmentId avgRating numRatings wouldTakeAgainPercentRounded mandatoryAttendance { yes no neither total } takenForCredit { yes no neither total } ...NoRatingsArea_teacher ...RatingDistributionWrapper_teacher } fragment NoRatingsArea_teacher on Teacher { lastName ...RateTeacherLink_teacher } fragment RatingDistributionWrapper_teacher on Teacher { ...NoRatingsArea_teacher ratingsDistribution { total ...RatingDistributionChart_ratingsDistribution } } fragment RatingDistributionChart_ratingsDistribution on ratingsDistribution { r1 r2 r3 r4 r5 } fragment RateTeacherLink_teacher on Teacher { legacyId numRatings lockStatus }",
+  "variables": {
+    "query": {
+      "text": "Moshe Lach",
+      "schoolID": "U2Nob29sLTIyMw=="
+    },
+    "count": 10,
+    "includeCompareProfessors": false
+  }
+}
